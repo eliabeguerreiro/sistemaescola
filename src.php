@@ -40,7 +40,7 @@ if ($pagina == 'painel'){
   <div class="card-body">
     <h5 class="card-title">Maternal</h5>
     <p class="card-text">Só podem acessar está sala os alunos do Maternal, com a matricula que incia com (00).</p>
-    <a href="sala01.php" class="btn btn-info">Sala do Maternal</a>
+    <a href="salas/sala01.php" class="btn btn-info">Sala do Maternal</a>
   </div></div>
 </div>
 
@@ -48,48 +48,48 @@ if ($pagina == 'painel'){
   <div class="card-body">
     <h5 class="card-title">Jardim 1</h5>
     <p class="card-text">Só podem acessar está sala os alunos do Jardim 1, com a matricula que incia com (10).</p>
-    <a href="#" class="btn btn-info">Sala do jardim 1</a>
+    <a href="salas/sala02" class="btn btn-info">Sala do jardim 1</a>
   </div></div>
 
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">
     <h5 class="card-title">Jardim 2</h5>
     <p class="card-text">Só podem acessar está sala os alunos do Jardim 2, com a matricula que incia com (20).</p>
-    <a href="#" class="btn btn-info">Sala do jardim 2</a>
+    <a href="salas/sala03" class="btn btn-info">Sala do jardim 2</a>
   </div></div>
 
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">
     <h5 class="card-title">1° Ano</h5>
     <p class="card-text">Só podem acessar está sala os alunos do 1° Ano, com a matricula que incia com (01).</p>
-    <a href="#" class="btn btn-info">Sala do 1°Ano</a>
+    <a href="salas/sala04" class="btn btn-info">Sala do 1°Ano</a>
   </div></div>
 
   <div class="card mb- bg-sencondary">
   <div class="card-body">
     <h5 class="card-title">2° Ano</h5>
     <p class="card-text">Só podem acessar está sala os alunos do 2° Ano, com a matricula que incia com (02).</p>
-    <a href="#" class="btn btn-info">Sala do 2°Ano</a>
+    <a href="salas/sala05" class="btn btn-info">Sala do 2°Ano</a>
   </div></div>
 
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">    <h5 class="card-title">3° Ano</h5>
     <p class="card-text">Só podem acessar está sala os alunos do 1° Ano, com a matricula que incia com (03).</p>
-    <a href="#" class="btn btn-info">Sala do 3°Ano</a>
+    <a href="salas/sala06" class="btn btn-info">Sala do 3°Ano</a>
   </div></div>
 
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">
     <h5 class="card-title">4° Ano</h5>
     <p class="card-text">Só podem acessar está sala os alunos do 1° Ano, com a matricula que incia com (04).</p>
-    <a href="#" class="btn btn-info">Sala do 4°Ano</a>
+    <a href="salas/sala07" class="btn btn-info">Sala do 4°Ano</a>
   </div></div>
 
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">
     <h5 class="card-title">5° Ano</h5>
     <p class="card-text">Só podem acessar está sala os alunos do 1° Ano, com a matricula que incia com (05).</p>
-    <a href="#" class="btn btn-info">Sala do 5°Ano</a>
+    <a href="salas/sala08" class="btn btn-info">Sala do 5°Ano</a>
   </div></div>
   <nav class="navbar navbar-dark bg-primary">
     <h1 class="navbar-brand mx-auto">Escola Universo da Criança</h1>

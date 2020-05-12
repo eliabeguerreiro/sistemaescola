@@ -1,22 +1,22 @@
 <?php
 session_start();
-include("functions/funcoes.php");
+include("../functions/funcoes.php");
 if(!empty($_SESSION['id'])){   
-}else{header("Location: index.php");}
+}else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Admin'){
-}elseif($matricula[0]!=0 || $matricula[1]!=1){
+}elseif($matricula[0]!=2 || $matricula[1]!=0){
     $_SESSION['msg']='Você não pertence a esta sala!</br>';
-    header("Location: src.php?pg=painel");}
-$pagina ='sala01';
+    header("Location:../src.php?pg=painel");}
+$pagina ='jardim02';
 ?>
     <html>
 <head>
     <meta charset="utf-8">
-	<title>Maternal</title>
+	<title>Jardim 2</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
 </head>
 
 <body class="">
@@ -25,13 +25,13 @@ $pagina ='sala01';
     	    <span class="navbar-toggler-icon"></span>
  		</button>
  		<h1 class="navbar-brand m-auto">Maternal</h1>
- 		<button type="button" class="btn btn-danger"><a class="text-decoration-none text-reset" href="src.php?pg=painel">Voltar</a></button>
+ 		<button type="button" class="btn btn-danger"><a class="text-decoration-none text-reset" href="../src.php?pg=painel">Voltar</a></button>
 	</nav><?php
     $video = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
     video($pagina,$video);?> 
     <nav class="navbar navbar-dark bg-primary">
     <h1 class="navbar-brand mx-auto">Escola Universo da Criança</h1>
-    <h3 class="navbar-brand mx-auto">Aluno Fulano</h3>
+    <h3 class="navbar-brand mx-auto"><?php echo $_SESSION['tipo'].': '.$_SESSION['nome'];?></h3>
     </nav>
 </body>
 </html><?php

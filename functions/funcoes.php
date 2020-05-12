@@ -13,7 +13,7 @@ function video ($sala, $pagina){
         
         <div class='btn-group-vertical '
             ><button type='button' class='btn btn-info '>
-                <a class='nav-link text-decoration-none text-reset pb-1' href='#'>Aula <?php echo $i;?></a></button>
+                <a class='nav-link text-decoration-none text-reset pb-1' href='sala01.php?pagina=<?php echo $i;?>'><?php echo $i;?></a></button>
         </div>
     <?php }?>
     </div>

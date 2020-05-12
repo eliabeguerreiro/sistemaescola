@@ -7,7 +7,7 @@ if($_SESSION['tipo'] == 'Admin'){
 }elseif($matricula[0]!=0 || $matricula[1]!=1){
     $_SESSION['msg']='Você não pertence a esta sala!</br>';
     header("Location:../src.php?pg=painel");}
-$pagina ='sala01';
+$pagina ='maternal';
 ?>
     <html>
 <head>

@@ -2,7 +2,7 @@
 ob_start();
 function video ($sala, $pagina){
     include('conexao.php');
-    $cmd = "SELECT * FROM aulas WHERE sala = '$sala'"; 
+    $cmd = "SELECT * FROM videos WHERE sala = '$sala'"; 
     $result = mysqli_query($conn, $cmd);
     $total = mysqli_num_rows($result);
     $registros = 1;
@@ -19,7 +19,7 @@ function video ($sala, $pagina){
     </div>
 
     <?php
-    $cmd = "SELECT * FROM aulas WHERE sala = '$sala'";
+    $cmd = "SELECT * FROM videos WHERE sala = '$sala'";
     $produto = mysqli_query($conn, $cmd);
     while ($row = mysqli_fetch_array($produto)){
         if($row['num_fila']!=$pagina){	

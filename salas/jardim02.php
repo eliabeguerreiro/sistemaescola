@@ -30,10 +30,7 @@ $pagina ='jardim02';
     video($pagina,$video);?> 
     <nav class="navbar navbar-dark bg-primary">
     <h1 class="navbar-brand mx-auto">Escola Universo da Criança</h1>
-    <h3 class="navbar-brand mx-auto"><?php echo $_SESSION['tipo'].': '.$_SESSION['nome'];?></h3>
+    <h3 class="navbar-brand mx-auto"><?php echo$_SESSION['nome'];?></h3>
     </nav>
 </body>
-</html><?php
-
-
-
+</html>

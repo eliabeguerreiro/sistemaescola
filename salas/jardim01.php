@@ -33,7 +33,4 @@ $pagina ='jardim01';
     <h3 class="navbar-brand mx-auto"><?php echo $_SESSION['tipo'].': '.$_SESSION['nome'];?></h3>
     </nav>
 </body>
-</html><?php
-
-
-
+</html>

@@ -24,14 +24,14 @@ $pagina ='01ano';
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	    <span class="navbar-toggler-icon"></span>
  		</button>
- 		<h1 class="navbar-brand m-auto">2° Ano</h1>
+ 		<h1 class="navbar-brand m-auto">1° Ano</h1>
  		<a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-danger">Voltar</button></a>
 	</nav><?php
     $video = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
     video($pagina,$video);?> 
     <nav class="navbar navbar-dark bg-primary">
     <h1 class="navbar-brand mx-auto">Escola Universo da Criança</h1>
-    <h3 class="navbar-brand mx-auto"><?php echo $_SESSION['tipo'].': '.$_SESSION['nome'];?></h3>
+    <h3 class="navbar-brand mx-auto"><?php echo$_SESSION['nome'];?></h3>
     </nav>
 </body>
-</html><?php
+</html>

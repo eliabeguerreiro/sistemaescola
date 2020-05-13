@@ -4,10 +4,12 @@ include("../functions/funcoes.php");
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Administrador'){
-}elseif($_SESSION['tipo'] == 'jardim02'){
+}elseif($_SESSION['tipo'] != 'jardim02'){
     $_SESSION['msg']='Você não pertence a esta sala!</br>';
-    header("Location:../src.php?pg=painel");}
-$pagina ='jardim02';
+	ob_start();
+	header("Location:../src.php?pg=painel");}
+	ob_end_flush();
+$pagina = $_SESSION['tipo'];
 ?>
     <html>
 <head>

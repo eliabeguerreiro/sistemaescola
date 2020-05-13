@@ -13,17 +13,16 @@ function video ($sala, $pagina){
         
         <div class='btn-group-vertical '
             ><button type='button' class='btn btn-info '>
-                <a class='nav-link text-decoration-none text-reset pb-1' href='sala01.php?pagina=<?php echo $i;?>'><?php echo $i;?></a></button>
+                <a class='nav-link text-decoration-none text-reset pb-1' href='<?php echo$sala;?>.php?pagina=<?php echo$i;?>'><?php echo $i;?></a></button>
         </div>
     <?php }?>
     </div>
 
     <?php
-    $cmd = "SELECT * FROM videos WHERE sala = '$sala'";
+    $cmd = "SELECT * FROM videos WHERE sala = '$sala' AND num_fila = $pagina";
     $produto = mysqli_query($conn, $cmd);
     while ($row = mysqli_fetch_array($produto)){
-        if($row['num_fila']!=$pagina){	
-        }else{?><div class="container-fluid mx-auto mt-4 mb-4" id="ytplayer"> <script>
+            ?><div class="container-fluid mx-auto mt-4 mb-4" id="ytplayer"> <script>
             var tag = document.createElement('script');
             tag.src = "https://www.youtube.com/player_api";
             var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -39,7 +38,6 @@ function video ($sala, $pagina){
             </script>
             </div>
     <?php 
-    }
     return($produto);    
     }
 }

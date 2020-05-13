@@ -3,16 +3,16 @@ session_start();
 include("../functions/funcoes.php");
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
-if($_SESSION['tipo'] == 'Admin'){
-}elseif($matricula[0]!=2 || $matricula[1]!=5){
+if($_SESSION['tipo'] == 'Administrador'){
+}elseif($matricula[0]!=0 || $matricula[1]!=1){
     $_SESSION['msg']='Você não pertence a esta sala!</br>';
     header("Location:../src.php?pg=painel");}
-$pagina ='05ano';
+$pagina ='01ano';
 ?>
     <html>
 <head>
     <meta charset="utf-8">
-	<title>5° Ano</title>
+	<title>1° Ano</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
@@ -35,6 +35,3 @@ $pagina ='05ano';
     </nav>
 </body>
 </html><?php
-
-
-

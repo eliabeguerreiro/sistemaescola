@@ -3,7 +3,7 @@ session_start();
 include("../functions/funcoes.php");
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
-if($_SESSION['tipo'] == 'Admin'){
+if($_SESSION['tipo'] == 'Administrador'){
 }elseif($matricula[0]!=2 || $matricula[1]!=2){
     $_SESSION['msg']='Você não pertence a esta sala!</br>';
     header("Location:../src.php?pg=painel");}
@@ -34,7 +34,4 @@ $pagina ='02ano';
     <h3 class="navbar-brand mx-auto"><?php echo $_SESSION['tipo'].': '.$_SESSION['nome'];?></h3>
     </nav>
 </body>
-</html><?php
-
-
-
+</html>

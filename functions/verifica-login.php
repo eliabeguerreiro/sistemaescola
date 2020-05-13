@@ -10,7 +10,6 @@ if($btnLogin){
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		if($resultado_usuario){
 			$row_usuario = mysqli_fetch_assoc($resultado_usuario);
-			var_dump($row_usuario);
 			if(password_verify($senha, $row_usuario['senha'])){
 				$_SESSION['id'] = $row_usuario['id'];
 				$_SESSION['nome'] = $row_usuario['nome'];

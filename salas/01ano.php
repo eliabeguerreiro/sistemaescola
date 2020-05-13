@@ -24,8 +24,8 @@ $pagina ='01ano';
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	    <span class="navbar-toggler-icon"></span>
  		</button>
- 		<h1 class="navbar-brand m-auto">Maternal</h1>
- 		<button type="button" class="btn btn-danger"><a class="text-decoration-none text-reset" href="../src.php?pg=painel">Voltar</a></button>
+ 		<h1 class="navbar-brand m-auto">2° Ano</h1>
+ 		<a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-danger">Voltar</button></a>
 	</nav><?php
     $video = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
     video($pagina,$video);?> 

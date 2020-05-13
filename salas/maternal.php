@@ -25,8 +25,7 @@ $pagina ='maternal';
     	    <span class="navbar-toggler-icon"></span>
  		</button>
  		<h1 class="navbar-brand m-auto">Maternal</h1>
- 		<button type="button" class="btn btn-danger"><a class="text-decoration-none text-reset" href="../src.php?pg=painel">Voltar</a></button>
-	</nav><?php
+		 <a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-danger">Voltar</button></a>	</nav><?php
     $video = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
     video($pagina,$video);?> 
     <nav class="navbar navbar-dark bg-primary">

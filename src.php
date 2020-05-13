@@ -31,7 +31,7 @@ if ($pagina == 'painel'){
 <body class="">
   <nav class="navbar navbar-dark bg-primary  mb-2">
       <h1 class="navbar-brand ">Painel de acesso</h1> 
-      <button type="button" class="btn btn-danger"><a class="text-decoration-none text-reset" href="<?php echo"src.php?pg=sair";?>">Sair</a></button>   
+      <a class="text-decoration-none text-reset" href="<?php echo"src.php?pg=sair";?>"><button type="button" class="btn btn-danger">Sair</button></a>   
   </nav>
    <div class="card mb-1 bg-sencondary">
   <div class="card-body">

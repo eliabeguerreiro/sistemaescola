@@ -12,7 +12,7 @@ $pagina ='04ano';
     <html>
 <head>
     <meta charset="utf-8">
-	<title>4° Anornal</title>
+	<title>4° Ano</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
@@ -24,9 +24,8 @@ $pagina ='04ano';
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	    <span class="navbar-toggler-icon"></span>
  		</button>
- 		<h1 class="navbar-brand m-auto">Maternal</h1>
- 		<button type="button" class="btn btn-danger"><a class="text-decoration-none text-reset" href="../src.php?pg=painel">Voltar</a></button>
-	</nav><?php
+ 		<h1 class="navbar-brand m-auto">4° Ano</h1>
+		 <a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-danger">Voltar</button></a>	</nav><?php
     $video = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
     video($pagina,$video);?> 
     <nav class="navbar navbar-dark bg-primary">

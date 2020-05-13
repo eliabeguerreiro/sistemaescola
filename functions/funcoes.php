@@ -11,9 +11,8 @@ function video ($sala, $pagina){
     for($i = 1; $i < $numPaginas + 1; $i++) {
         ?>
         
-        <div class='btn-group-vertical '
-            ><button type='button' class='btn btn-info '>
-                <a class='nav-link text-decoration-none text-reset pb-1' href='<?php echo$sala;?>.php?pagina=<?php echo$i;?>'><?php echo $i;?></a></button>
+        <div class='btn-group-vertical '>
+                <a class='nav-link text-decoration-none text-reset pb-1' href='<?php echo$sala;?>.php?pagina=<?php echo$i;?>'><button type='button' class='btn btn-info '><?php echo $i;?></button></a>
         </div>
     <?php }?>
     </div>

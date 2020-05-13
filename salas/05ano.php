@@ -9,7 +9,7 @@ if($_SESSION['tipo'] == 'Administrador'){
 	ob_start();
 	header("Location:../src.php?pg=painel");}
 	ob_end_flush();
-$pagina = $_SESSION['tipo'];
+$pagina = '05ano';
 ?>
     <html>
 <head>

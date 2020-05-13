@@ -4,7 +4,7 @@ include("../functions/funcoes.php");
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Administrador'){
-}elseif($matricula[0]!=1 || $matricula[1]!=0){
+}elseif($_SESSION['tipo'] == 'jardim01'){
     $_SESSION['msg']='Você não pertence a esta sala!</br>';
     header("Location:../src.php?pg=painel");}
 $pagina ='jardim01';

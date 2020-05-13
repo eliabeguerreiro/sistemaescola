@@ -12,7 +12,7 @@ include("functions/funcoes.php");
 	</head>
 	<body>
 	<center>
-		<h2>Entrar</h2>
+		<h2>Escola Universo da Criança</h2>
 		<?php
 		if(isset($_SESSION['msg'])){
 			msg_sistem($_SESSION['msg']);
@@ -25,19 +25,17 @@ include("functions/funcoes.php");
 		<div class="jumbotron  container">	
 			<form method="POST" action="functions/verifica-login.php">
 				<div class="form-group">
-					<label for="exampleInputEmail1">Matricula</label>
-					<input type="matricula"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="matricula" placeholder="Digite sua matricula">
-					<small id="emailHelp" class="form-text text-muted">Não compartilhe sua matricula com ninguém.</small>
+					<label for="exampleInputEmail1">Matrícula</label>
+					<input type="matricula"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="matricula" placeholder="Digite sua matrícula">
+					<small id="emailHelp" class="form-text text-muted">Não compartilhe sua matrícula com ninguém</small>
 				</div>
 				<div class="form-group">	
 					<labelfor="exampleInputPassword1">Senha</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Digite sua senha">
 					<br>
 				</div>
-				
-					<button class="btn btn-primary" type="submit" name="btnLogin" value="acessar">Loguin</button>
-					<h4>Mudar senha?</h4>
-					<a href="src/mudarsenha.php">aqui</a>
+					<button class="btn btn-primary" type="submit" name="btnLogin" value="acessar">Login</button>
+					
 				
 			</form>
 		</div>

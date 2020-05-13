@@ -35,22 +35,28 @@ if ($pagina == 'painel'){
   </nav>
    <div class="card mb-1 bg-sencondary">
   <div class="card-body">
-    <h5 class="card-title">Maternal</h5>
-    <p class="card-text">Acesso exclusivo para alunos do Maternal</p>
-    <a href="salas/maternal.php" class="btn btn-info">Sala do Maternal</a>
+    <h5 class="card-title">Infantil 2</h5>
+    <p class="card-text">Acesso exclusivo para alunos do Infantil 2</p>
+    <a href="salas/infantil02.php" class="btn btn-info">Sala do Infantil 2</a>
   </div></div>
 </div>
 <div class="card mb-1 bg-sencondary">
   <div class="card-body">
-    <h5 class="card-title">Jardim 1</h5>
-    <p class="card-text">Acesso exclusivo para alunos do Jardim 1</p>
-    <a href="salas/jardim01.php" class="btn btn-info">Sala do Jardim 1</a>
+    <h5 class="card-title">Infantil 3</h5>
+    <p class="card-text">Acesso exclusivo para alunos do Infantil 3</p>
+    <a href="salas/infantil03.php" class="btn btn-info">Sala do Infantil 3</a>
   </div></div>
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">
-    <h5 class="card-title">Jardim 2</h5>
-    <p class="card-text">Acesso exclusivo para alunos do Jardim 2</p>
-    <a href="salas/jardim02.php" class="btn btn-info">Sala do Jardim 2</a>
+    <h5 class="card-title">Infantil 4</h5>
+    <p class="card-text">Acesso exclusivo para alunos do Infantil 4</p>
+    <a href="salas/infantil04.php" class="btn btn-info">Sala do Infantil 4</a>
+  </div></div>
+  <div class="card mb-1 bg-sencondary">
+  <div class="card-body">
+    <h5 class="card-title">Infantil 5</h5>
+    <p class="card-text">Acesso exclusivo para alunos do Infantil 5</p>
+    <a href="salas/infantil05.php" class="btn btn-info">Sala do infantl 5</a>
   </div></div>
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">

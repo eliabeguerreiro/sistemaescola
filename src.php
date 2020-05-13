@@ -72,18 +72,18 @@ if ($pagina == 'painel'){
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">
     <h5 class="card-title">4° Ano</h5>
-    <p class="card-text">Acesso exclusivo para alunos do 4° Ano</p>
+    <p class="card-text">Acesso exclusivo para alunos do 4°Ano</p>
     <a href="salas/04ano.php" class="btn btn-info">Sala do 4°Ano</a>
   </div></div>
   <div class="card mb-1 bg-sencondary">
   <div class="card-body">
     <h5 class="card-title">5° Ano</h5>
-    <p class="card-text">Acesso exclusivo para alunos do 5° Ano</p>
+    <p class="card-text">Acesso exclusivo para alunos do 5°Ano</p>
     <a href="salas/05ano.php" class="btn btn-info">Sala do 5°Ano</a>
   </div></div>
   <nav class="navbar navbar-dark bg-primary">
     <h1 class="navbar-brand mx-auto">Escola Universo da Criança</h1>
-    <h3 class="navbar-brand mx-auto"><?php $_SESSION['nome'];?></h3>
+    <h3 class="navbar-brand mx-auto"><?php echo $_SESSION['nome'];?></h3>
     </nav>
 
 </body>

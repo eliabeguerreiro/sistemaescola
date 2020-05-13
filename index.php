@@ -35,8 +35,6 @@ include("functions/funcoes.php");
 					<br>
 				</div>
 					<button class="btn btn-primary" type="submit" name="btnLogin" value="acessar">Login</button>
-					
-				
 			</form>
 		</div>
 		<br>

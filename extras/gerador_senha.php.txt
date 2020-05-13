@@ -1,0 +1,4 @@
+﻿<?php
+$dados = '000000';
+$dados = password_hash($dados, PASSWORD_DEFAULT);
+echo $dados;

@@ -11,7 +11,6 @@ if($_SESSION['tipo'] == 'Administrador'){
 	ob_end_flush();
 $pagina = 'infantil02';
 ?>
-
     <html>
 <head>
     <meta charset="utf-8">

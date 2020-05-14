@@ -5,7 +5,7 @@ if(!empty($_SESSION['id'])){
 }else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Administrador'){
 }elseif($_SESSION['tipo'] != '03ano'){
-    $_SESSION['msg']='Você não pertence a esta sala!</br>';
+	$_SESSION['msg']='Você não pertence a esta sala!</br>';
 	ob_start();
 	header("Location:../src.php?pg=painel");}
 	ob_end_flush();

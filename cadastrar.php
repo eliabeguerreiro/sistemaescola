@@ -3,14 +3,14 @@ session_start();
 ob_start();
 $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
 if($btnCadUsuario){
-	include_once 'conexao.php';
+	include_once 'functions/conexao.php';
 	$dados_rc = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 	
 	$erro = false;
 	
 	$dados_st = array_map('strip_tags', $dados_rc);
 	$dados = array_map('trim', $dados_st);
-	
+	var_dump($dados);
 	if(in_array('',$dados)){
 		$erro = true;
 		$_SESSION['msg'] = "Necessário preencher todos os campos";
@@ -37,10 +37,10 @@ if($btnCadUsuario){
 	}
 	
 	
-	//var_dump($dados);
 	if(!$erro){
-		//var_dump($dados);
-		$dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
+        $tipo = $dados['turma'];
+
+        $dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
 		$result_usuario = "INSERT INTO usuarios (nome, matricula, senha, tipo) VALUES ('" .$dados['nome']. "','" .$dados['matricula']. "','" .$dados['senha']. "','$tipo')";
 		$resultado_usario = mysqli_query($conn, $result_usuario);
 		if(mysqli_insert_id($conn)){
@@ -77,9 +77,21 @@ if($btnCadUsuario){
 			
 			<label>Matricula</label>
 			<input type="matricula" name="matricula" placeholder="Digite a sua matricula">
-			
-            <label>Turmaa</label>
-			<input type="matricula" name="matricula" placeholder="Ex: 'infantil00' | '00Ano'">
+			            
+            <label for="turma">Turma</label>
+              <select name="turma">
+                  <option value="">--</option>
+                  <option value="infantil02">Infantil 2</option>
+                  <option value="infantil03">Infantil 3</option>
+                  <option value="infantil04">Infantil 4</option>
+                  <option value="infantil05">Infantil 5</option>
+                  <option value="01ano">1° Ano</option>
+                  <option value="02ano">2° Ano</option>
+                  <option value="03ano">3° Ano</option>
+                  <option value="04ano">4° Ano</option>
+                  <option value="05ano">5° Ano</option>
+                  
+              </select>
 
 			<label>Senha</label>
 			<input type="password" name="senha" placeholder="Digite uma senha"/>

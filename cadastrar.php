@@ -1,7 +1,6 @@
 <?php
 session_start();
 ob_start();
-$nivel = "Aluno";
 $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
 if($btnCadUsuario){
 	include_once 'conexao.php';
@@ -42,7 +41,7 @@ if($btnCadUsuario){
 	if(!$erro){
 		//var_dump($dados);
 		$dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
-		$result_usuario = "INSERT INTO usuarios (nome, matricula, senha, nivel) VALUES ('" .$dados['nome']. "','" .$dados['matricula']. "','" .$dados['senha']. "','$nivel')";
+		$result_usuario = "INSERT INTO usuarios (nome, matricula, senha, tipo) VALUES ('" .$dados['nome']. "','" .$dados['matricula']. "','" .$dados['senha']. "','$tipo')";
 		$resultado_usario = mysqli_query($conn, $result_usuario);
 		if(mysqli_insert_id($conn)){
 			$_SESSION['msgcad'] = "Usuário cadastrado com sucesso";
@@ -79,8 +78,12 @@ if($btnCadUsuario){
 			<label>Matricula</label>
 			<input type="matricula" name="matricula" placeholder="Digite a sua matricula">
 			
+            <label>Turmaa</label>
+			<input type="matricula" name="matricula" placeholder="Ex: 'infantil00' | '00Ano'">
+
 			<label>Senha</label>
 			<input type="password" name="senha" placeholder="Digite uma senha"/>
+
 
 
 		<br>	

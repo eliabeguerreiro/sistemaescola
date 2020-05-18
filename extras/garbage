@@ -11,7 +11,7 @@ $h = date('h');
 $h -=3; 
 $saida = $h.':'.date('i:s');
 $relatorio['matriucula'] = $_SESSION['matricula'];
-$relatorio['dia'] = date("d/m/Y");
+$_SESSION['dia'] = date("d/m/Y");
 $relatorio['entrada'] = $entrada;
 $relatorio['saida'] = $saida;
 var_dump($relatorio);

@@ -3,7 +3,6 @@ session_start();
 include("functions/funcoes.php");
 $pagina = $_GET['pg'];
 $matricula[] = str_split($_SESSION['matricula']);
-echo $_SESSION['tipo'];
 if ($pagina == 'painel'){
     if(!empty($_SESSION['id'])){}
     else{

@@ -47,4 +47,10 @@ function msg_sistem ($msg){
         echo$msg;
         echo"</div>";
         }     
+
+function hora_entrada(){
+    $h = date('h');
+    $h -=3; 
+    $nh = $h.':'.date('i:s');
+    return($nh);}
 ob_end_flush();

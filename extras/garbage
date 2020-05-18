@@ -1,0 +1,22 @@
+<?php
+include_once('functions/conexao.php');
+$relatorio = array(
+    'matricula' => '',
+    'dia' => '',
+    'entrada' =>'',
+    'saida' =>'',
+);
+$entrada = hora_entrada();
+$h = date('h');
+$h -=3; 
+$saida = $h.':'.date('i:s');
+$relatorio['matriucula'] = $_SESSION['matricula'];
+$relatorio['dia'] = date("d/m/Y");
+$relatorio['entrada'] = $entrada;
+$relatorio['saida'] = $saida;
+var_dump($relatorio);
+$relat = "INSERT INTO 'sessoes' (matricula, dia, entrada, saida,) VALUES ('" .$relatorio['matricula']. "','" .$relatorio['dia']. "','" .$relatorio['entrada']. "','" .$relatorio['saida']. "')";
+$resultado_usario = mysqli_query($conn, $relat);
+
+//cria-se uma matriz para cada dia, posteriormente uma para cada semana contendo as somas dos dias, e por fim uma mensal.
+

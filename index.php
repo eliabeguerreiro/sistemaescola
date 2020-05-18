@@ -17,9 +17,6 @@ include("functions/funcoes.php");
 		if(isset($_SESSION['msg'])){
 			msg_sistem($_SESSION['msg']);
 			unset($_SESSION['msg']);
-		}elseif(isset($_SESSION['msgcad'])){
-			msg_sistem($_SESSION['msgcad']);
-			unset($_SESSION['msg']);
 		}?>
 		<p>
 		<div class="jumbotron  container">	

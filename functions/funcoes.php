@@ -1,6 +1,7 @@
 <?php
 ob_start();
 function video ($sala, $pagina){
+    include_once('../relatorio.php');
     include('conexao.php');
     $cmd = "SELECT * FROM videos WHERE sala = '$sala'"; 
     $result = mysqli_query($conn, $cmd);

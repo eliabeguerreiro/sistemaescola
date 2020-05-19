@@ -103,10 +103,7 @@ if ($pagina == 'cadastrar'){
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         </body>
     </html>
-<?php
-echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
-echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
-echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
+<?php  
 }
 
 if ($pagina == 'mudar'){
@@ -156,10 +153,8 @@ if ($pagina == 'mudar'){
                 }
             ?><p>
             <form method="POST" action="">
-			
 			<label>Matricula</label>
 			<input type="matricula" name="matricula" placeholder="Digite a matricula do aluno">
-
 			<label>Senha</label>
 			<input type="password" name="senha" placeholder="Digite uma nova senha"/>
 		<br>	
@@ -170,11 +165,7 @@ if ($pagina == 'mudar'){
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         </body> 
     </html>
-<?php 
-echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
-echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
-echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
-}
+<?php }
 
 if ($pagina == 'subirvideo'){
     $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
@@ -243,7 +234,6 @@ if ($pagina == 'subirvideo'){
                     <option value="04ano">4° Ano</option>
                     <option value="05ano">5° Ano</option>
                 </select>
-                
             <br>	
                 <input type="submit" name="btnCadUsuario" value="Cadastrar"><br>
             </form>
@@ -252,8 +242,5 @@ if ($pagina == 'subirvideo'){
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         </body>
     </html>
-<?php 
-echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
-echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
-echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
+<?php
 }

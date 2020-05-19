@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("../functions/funcoes.php");
+$_SESSION['hora_entrada'] = hora_entrada();
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Administrador'){
@@ -27,7 +28,7 @@ $pagina = '02ano';
     	    <span class="navbar-toggler-icon"></span>
  		</button>
  		<h1 class="navbar-brand m-auto">2° Ano</h1>
- 		<a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-danger">Voltar</button></a>
+ 		<a class="text-decoration-none text-reset" href="../relatorio.php"><button type="button" class="btn btn-danger">Voltar</button></a>
 	</nav><?php
     $video = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
     video($pagina,$video);?> 

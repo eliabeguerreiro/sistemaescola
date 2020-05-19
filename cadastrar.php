@@ -2,7 +2,6 @@
 ob_start();
 session_start();
 include("functions/funcoes.php");
-$_SESSION['hora_entrada'] = hora_entrada();
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Administrador'){}

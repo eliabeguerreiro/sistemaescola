@@ -2,6 +2,7 @@
 session_start();
 include('functions/funcoes.php');
 include('functions/conexao.php');
+include('dompdf');
     
 ?>
 <form method="POST" action="">
@@ -18,4 +19,13 @@ include('functions/conexao.php');
 if ($_POST){
     $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia='". $_POST['dia'] ."'";
     $relatorio = mysqli_query($conn, $relat);
+    $html ='';
+    while($row_relatorio = mysqli_fetch_assoc($relatorio)){
+        
+    $html .= $row_relatorio['matricula'].'</br>';
+    $html .= $row_relatorio['dia'].'</br>';
+    $html .= $row_relatorio['entrada'].'</br>';
+    $html .= $row_relatorio['saida'].'<hr>';
+    
+    }
 }

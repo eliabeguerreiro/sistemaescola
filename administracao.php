@@ -21,10 +21,11 @@ if ($_POST){
     $html ='';
     while($row_relatorio = mysqli_fetch_assoc($relatorio)){
         
-    $html .= $row_relatorio['matricula'].'</br>';
-    $html .= $row_relatorio['dia'].'</br>';
-    $html .= $row_relatorio['entrada'].'</br>';
-    $html .= $row_relatorio['saida'].'<hr>';
+    $html .= 'Matricula: '.$row_relatorio['matricula'].'</br>';
+    $html .= 'Data: '.$row_relatorio['dia'].'</br>';
+    $html .= 'Horário de Entrada: '.$row_relatorio['entrada'].'</br>';
+    $html .= 'Horário de Saída: '.$row_relatorio['saida'].'<hr>';
     
     }
+echo($html);
 }

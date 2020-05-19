@@ -2,7 +2,6 @@
 session_start();
 include('functions/funcoes.php');
 include('functions/conexao.php');
-include('dompdf');
     
 ?>
 <form method="POST" action="">

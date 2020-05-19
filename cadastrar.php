@@ -8,8 +8,12 @@ if(!empty($_SESSION['id'])){
 if($_SESSION['tipo'] == 'Administrador'){}
 else{$_SESSION['msg']='Você não Tem pérmissão para acessar essa pagina!</br>';
 header("Location:../src.php?pg=painel");}
-$pagina = $_GET['pg'];
 
+echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
+echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
+echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
+
+$pagina = $_GET['pg'];
 if ($pagina == 'cadastrar'){
     $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
     if($btnCadUsuario){
@@ -100,7 +104,11 @@ if ($pagina == 'cadastrar'){
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         </body>
     </html>
-<?php }
+<?php
+echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
+echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
+echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
+}
 
 if ($pagina == 'mudar'){
     $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
@@ -163,7 +171,11 @@ if ($pagina == 'mudar'){
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         </body> 
     </html>
-<?php }
+<?php 
+echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
+echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
+echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
+}
 
 if ($pagina == 'subirvideo'){
     $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
@@ -241,8 +253,8 @@ if ($pagina == 'subirvideo'){
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         </body>
     </html>
-<?php } 
-
+<?php 
 echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
 echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
 echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
+}

@@ -3,12 +3,15 @@ session_start();
 include("functions/funcoes.php");
 ?>
 <html lang="pt-br">
-	<head>
+<head>
 		<meta charset="utf-8">
-		<title>Universo da Criança</title>
+		<title>Escola - Universo da Criança</title>
+		<meta name=”description” content='Plataforma online da escola universo da criança'>
+		<meta name="keywords" content="universo da criança, escolinha várzea, escolinha universo da criança, escolinha universo, escolinha infantl várzea, escolinha infantl varzea"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="css.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script data-ad-client="ca-pub-5526172241213918" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	</head>
 	<body>
 	<center>

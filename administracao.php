@@ -12,6 +12,11 @@ include('functions/conexao.php');
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script>$("#btnExport").click(function (e) {
+                    window.open('data:application/vnd.ms-excel,' + $('#dvData').html());
+                    e.preventDefault();
+                });
+        </script>
     </head>
 
     <body>
@@ -26,7 +31,7 @@ include('functions/conexao.php');
                 <small id="diaHelp" class="form-text text-muted">Insira as barras "/"</small>
             </form>
         </div>
-
+        <div id="dvData">
         <table class="table">
             <thead>
                 <tr>
@@ -54,6 +59,8 @@ include('functions/conexao.php');
                 ?>    
             </tbody>
         </table>
-        </center>            
+        </div>
+        <input type="button" id="btnExport" value=" Export Table data into Excel " />
+            </center>                     
     </body>
 </html>

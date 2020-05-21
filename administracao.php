@@ -19,10 +19,8 @@ include('functions/conexao.php');
             <center>
             <form method="POST" action="">
                 <label>Matricula:</label></br>
-                </br>
                 <input type="matricula" name="matricula" placeholder="Digite a matricula do aluno"></br>
                 </br><label>Data:</label></br>
-                </br>
                 <input type="text" name="dia" placeholder="dd/mm/aaaa">
                 <input type="submit" name="btnCadUsuario" value="Procurar"><br>
                 <small id="diaHelp" class="form-text text-muted">Insira as barras "/"</small>

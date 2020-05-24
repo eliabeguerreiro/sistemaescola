@@ -12,11 +12,7 @@ include('functions/conexao.php');
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script>$("#btnExport").click(function (e) {
-                    window.open('data:application/vnd.ms-excel,' + $('#dvData').html());
-                    e.preventDefault();
-                });
-        </script>
+        
     </head>
 
     <body>
@@ -46,21 +42,26 @@ include('functions/conexao.php');
                 if ($_POST){
                     $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia='". $_POST['dia'] ."'";
                     $relatorio = mysqli_query($conn, $relat);
-                    $html ='';
+                    $$dadosXls ='';
                     while($row_relatorio = mysqli_fetch_assoc($relatorio)){
-                        echo'<tr>';
-                        echo"<th scope 'row'>".$row_relatorio['matricula'].'</th>';
-                        echo'<td>'.$row_relatorio['dia'].'</td>';
-                        echo'<td>'.$row_relatorio['entrada'].'</td>';
-                        echo'<td>'.$row_relatorio['saida'].'</td>';
-                        echo'</tr>';
+                        $dadosXls.='<tr>';
+                        $dadosXls.="<th scope 'row'>".$row_relatorio['matricula'].'</th>';
+                        $dadosXls.='<td>'.$row_relatorio['dia'].'</td>';
+                        $dadosXls.='<td>'.$row_relatorio['entrada'].'</td>';
+                        $dadosXls.='<td>'.$row_relatorio['saida'].'</td>';
+                        $dadosXls.='</tr>';
                     }
                 }
-                ?>    
+                /*$arquivo = "Relatorio.xls";
+                header('Content-Type: application/vnd.ms-excel');
+                header('Content-Disposition: attachment;filename="'.$arquivo.'"');
+                header('Cache-Control: max-age=1');
+                echo $dadosXls;  
+                */?>    
             </tbody>
         </table>
         </div>
-        <input type="button" id="btnExport" value=" Export Table data into Excel " />
+        
             </center>                     
     </body>
 </html>

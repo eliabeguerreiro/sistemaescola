@@ -2,6 +2,7 @@
 session_start();
 include('functions/funcoes.php');
 include('functions/conexao.php');    
+(isset($_GET['pg']))? $_GET['pg'] : 1;
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -12,7 +13,6 @@ include('functions/conexao.php');
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
-        
     </head>
 
     <body>
@@ -27,41 +27,42 @@ include('functions/conexao.php');
                 <small id="diaHelp" class="form-text text-muted">Insira as barras "/"</small>
             </form>
         </div>
-        <div id="dvData">
-        <table class="table">
-            <thead>
-                <tr>
-                <th scope="col">Matricula</th>
-                <th scope="col">Dia</th>
-                <th scope="col">Entrada</th>
-                <th scope="col">Saída</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if ($_POST){
-                    $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia='". $_POST['dia'] ."'";
-                    $relatorio = mysqli_query($conn, $relat);
-                    $$dadosXls ='';
-                    while($row_relatorio = mysqli_fetch_assoc($relatorio)){
-                        $dadosXls.='<tr>';
-                        $dadosXls.="<th scope 'row'>".$row_relatorio['matricula'].'</th>';
-                        $dadosXls.='<td>'.$row_relatorio['dia'].'</td>';
-                        $dadosXls.='<td>'.$row_relatorio['entrada'].'</td>';
-                        $dadosXls.='<td>'.$row_relatorio['saida'].'</td>';
-                        $dadosXls.='</tr>';
-                    }
+
+
+
+        <?php
+        $html ='';
+        $html .="<table class='table'>";
+        $html .='<thead>';
+        $html .='<tr>';
+        $html .='<th scope="col">Matricula</th>';
+        $html .='<th scope="col">Dia</th>';
+        $html .='<th scope="col">Entrada</th>';
+        $html .='<th scope="col">Saída</th>';
+        $html .='</tr>';
+        $html .='</thead>';
+        $html .='<tbody>';
+        if ($_POST){
+            $_SESSION['matricula'] = $_POST['matricula'];
+            $_SESSION['dia'] = $_POST['dia'];
+            $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia='". $_POST['dia'] ."'";
+            $relatorio = mysqli_query($conn, $relat);
+                 
+            while($row_relatorio = mysqli_fetch_assoc($relatorio)){
+                $html .='<tr>';
+                $html .="<th scope 'row'>".$row_relatorio['matricula'].'</th>';
+                $html .='<td>'.$row_relatorio['dia'].'</td>';
+                $html .='<td>'.$row_relatorio['entrada'].'</td>';
+                $html .='<td>'.$row_relatorio['saida'].'</td>';
+                $html .='</tr>';
                 }
-                /*$arquivo = "Relatorio.xls";
-                header('Content-Type: application/vnd.ms-excel');
-                header('Content-Disposition: attachment;filename="'.$arquivo.'"');
-                header('Cache-Control: max-age=1');
-                echo $dadosXls;  
-                */?>    
-            </tbody>
-        </table>
-        </div>
-        
-            </center>                     
+            }
+            $html .='</tbody>';
+            $html .='</table>';
+            echo $html;
+            echo "<a href='adm.php'>Baixar</a>";
+                        
+            ?>
+            </center>            
     </body>
 </html>

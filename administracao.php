@@ -51,6 +51,7 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
         if ($_POST){
             $_SESSION['matricula'] = $_POST['matricula'];
             $_SESSION['dia'] = $_POST['dia'];
+            $_SESSION['dia2'] = $_POST['dia2'];
             $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia BETWEEN'". $_POST['dia'] ."' AND '". $_POST['dia2'] ."'";
             $relatorio = mysqli_query($conn, $relat);
             while($row_relatorio = mysqli_fetch_assoc($relatorio)){
@@ -65,7 +66,7 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $html .='</tbody>';
             $html .='</table>';
             echo $html;
-            echo "<a class='text-decoration-none text-reset' href='adm.php'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
+            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=2'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
         }
         if($pagina == '1dia'){?>
         <div class='jumbotron  container'> 
@@ -108,7 +109,7 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $html .='</tbody>';
             $html .='</table>';
             echo $html;
-            echo "<a class='text-decoration-none text-reset' href='adm.php'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
+            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=1'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
         }
 ?>
         </div>

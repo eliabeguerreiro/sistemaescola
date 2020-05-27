@@ -14,7 +14,6 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </head>
-
     <body>
     <center>
     <div class='jumbotron  container'>
@@ -23,7 +22,6 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
     <a class="text-decoration-none text-reset" href="administracao.php?pg=1dia"><button type="button" class="btn btn-primary">Apenas um dia</button></a>
     <a class="text-decoration-none text-reset" href="administracao.php?pg=2dia"><button type="button" class="btn btn-primary">Mais de um dia</button></a>
     </div> 
-
     <?php
         if($pagina == '2dia'){?>
         <div class='jumbotron  container'> 
@@ -55,10 +53,6 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $_SESSION['dia'] = $_POST['dia'];
             $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia BETWEEN'". $_POST['dia'] ."' AND '". $_POST['dia2'] ."'";
             $relatorio = mysqli_query($conn, $relat);
-    
-        
-
-
             while($row_relatorio = mysqli_fetch_assoc($relatorio)){
                 $html .='<tr>';
                 $html .="<th scope 'row'>".$row_relatorio['matricula'].'</th>';
@@ -73,8 +67,6 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             echo $html;
             echo "<a class='text-decoration-none text-reset' href='adm.php'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
         }
-
-    
         if($pagina == '1dia'){?>
         <div class='jumbotron  container'> 
             <form method="POST" action="">
@@ -104,8 +96,6 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $_SESSION['dia'] = $_POST['dia'];
             $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia='". $_POST['dia'] ."'";
             $relatorio = mysqli_query($conn, $relat);
-            
-
             while($row_relatorio = mysqli_fetch_assoc($relatorio)){
                 $html .='<tr>';
                 $html .="<th scope 'row'>".$row_relatorio['matricula'].'</th>';

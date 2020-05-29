@@ -69,10 +69,10 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $html .='</table>';
             echo $html;
             $_SESSION['html']=$html;
-            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=2'><button type='button' class='btn btn-primary'>Baixar</button></a>"; 
+            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=2'><button type='button' class='btn btn-primary'>Baixar tabela em Excel</button></a>"; 
             echo '<p>'; 
             echo '<p>'; 
-            echo "<a class='text-decoration-none text-reset' href='create.php'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
+            echo "<a class='text-decoration-none text-reset' href='create.php'><button type='button' class='btn btn-primary'>Baixar tabela em PDF</button></a>";           
          
         }
         if($pagina == '1dia'){?>

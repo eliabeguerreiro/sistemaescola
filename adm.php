@@ -39,7 +39,6 @@ if($pagina == '2'){
         $html .='</tr>';
 }
 }
-
 header ("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header ("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
 header ("Cache-Control: no-cache, must-revalidate");
@@ -48,5 +47,4 @@ header ("Content-type: application/x-msexcel");
 header ("Content-Disposition: attachment; filename=\"{$arquivo}\"" );
 header ("Content-Description: PHP Generated Data" );
 echo $html;
-
 exit;

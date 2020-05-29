@@ -9,7 +9,7 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Modelo relatorio</title>
+        <title>Relatorio</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -26,11 +26,13 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
         if($pagina == '2dia'){?>
         <div class='jumbotron  container'> 
             <form method="POST" action="">
-                <label>Matricula:</label></br>
+                <label>Matrícula:</label></br>
                 <input type="matricula" name="matricula" placeholder="Digite a matricula do aluno"></br>
-                </br><label>Data:</label></br>
+                </br><label>Datas:</label></br>
                 <input type="text" name="dia" placeholder="dd/mm/aaaa">
                 <input type="text" name="dia2" placeholder="dd/mm/aaaa">
+                </br>
+                </br>
                 <input type="submit" name="btnCadUsuario" value="Procurar"><br>
                 <small id="diaHelp" class="form-text text-muted">Preencha ambos os espaços as datas // Insira as barras "/"</small>
             </form>
@@ -76,10 +78,12 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
         if($pagina == '1dia'){?>
         <div class='jumbotron  container'> 
             <form method="POST" action="">
-                <label>Matricula:</label></br>
+                <label>Matrícula:</label></br>
                 <input type="matricula" name="matricula" placeholder="Digite a matricula do aluno"></br>
                 </br><label>Data:</label></br>
                 <input type="text" name="dia" placeholder="dd/mm/aaaa">
+                </br>
+                </br>
                 <input type="submit" name="btnCadUsuario" value="Procurar"><br>
                 <small id="diaHelp" class="form-text text-muted">Insira a data com as barras "/"</small>
             </form>

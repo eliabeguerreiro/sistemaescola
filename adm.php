@@ -28,8 +28,12 @@ if($pagina == '1'){
 }
 }
 if($pagina == '2'){
-    $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia BETWEEN'". $_SESSION['dia'] ."' AND '". $_SESSION['dia2'] ."'";
+    $relat = "SELECT * FROM sessoes WHERE matricula='". $_SESSION['matricula'] ."' AND dia BETWEEN'". $_SESSION['dia'] ."' AND '". $_SESSION['dia2'] ."'";
     $relatorio = mysqli_query($conn, $relat);
+
+    //echo'</br>'.$relat.'</br>';
+    //echo'</br>'.var_dump(mysqli_fetch_array($relatorio)).'</br>';
+    
     while($row_relatorio = mysqli_fetch_assoc($relatorio)){
         $html .='<tr>';
         $html .="<td>".$row_relatorio['matricula'].'</td>';

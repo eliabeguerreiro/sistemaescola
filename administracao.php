@@ -66,7 +66,12 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $html .='</tbody>';
             $html .='</table>';
             echo $html;
-            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=2'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
+            $_SESSION['html']=$html;
+            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=2'><button type='button' class='btn btn-primary'>Baixar</button></a>"; 
+            echo '<p>'; 
+            echo '<p>'; 
+            echo "<a class='text-decoration-none text-reset' href='create.php'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
+         
         }
         if($pagina == '1dia'){?>
         <div class='jumbotron  container'> 
@@ -109,7 +114,11 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $html .='</tbody>';
             $html .='</table>';
             echo $html;
-            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=1'><button type='button' class='btn btn-primary'>Baixar</button></a>";           
+            $_SESSION['html']=$html;
+            echo "<a class='text-decoration-none text-reset' href='adm.php?pg=1'><button type='button' class='btn btn-primary'>Baixar tabela em Excel</button></a>";
+            echo '<p>'; 
+            echo '<p>'; 
+            echo "<a class='text-decoration-none text-reset .mt-1' href='create.php'><button type='button' class='btn btn-primary'>Baixar tabela em PDF</button></a>";           
         }
 ?>
         </div>

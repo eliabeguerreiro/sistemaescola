@@ -8,9 +8,35 @@ if($_SESSION['tipo'] == 'Administrador'){}
 else{$_SESSION['msg']='Você não Tem pérmissão para acessar essa pagina!</br>';
 header("Location:../src.php?pg=painel");}
 
-echo "<h1>Cadastrar Aluno</h1></br><a href='cadastrar.php?pg=cadastrar'>Aqui</a></br>";
-echo "<h1>Cadastrar Video </h1></br><a href='cadastrar.php?pg=subirvideo'>Aqui</a></br>";  
-echo "<h1>Mudar Senha </h1></br><a href='cadastrar.php?pg=mudar'>Aqui</a></br>";  
+
+?>
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Painel de Controle</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+    <center>    
+    <div class='jumbotron  container'>
+    <h1>Painel de controle</h1>
+    </br>
+    <a class="text-decoration-none text-reset" href="cadastrar.php?pg=cadastrar"><button type="button" class="btn btn-primary">Adicionar Aluno</button></a>
+    <a class="text-decoration-none text-reset" href="cadastrar.php?pg=subirvideo"><button type="button" class="btn btn-primary">Adicionar Vídeo</button></a>
+    <a class="text-decoration-none text-reset" href="cadastrar.php?pg=mudar"><button type="button" class="btn btn-primary">Mudar Senha</button></a>
+    </div> 
+    </center>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/min.js/0.2.3/$.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>          
+    </body>
+</html>
+<?php
+
 
 $pagina = $_GET['pg'];
 if ($pagina == 'cadastrar'){

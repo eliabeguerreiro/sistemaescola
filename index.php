@@ -38,6 +38,19 @@ include("functions/funcoes.php");
 			</form>
 		</div>
 		<br>
+		
+		<footer class="page-footer font-small blue">
+  		<!-- Copyright -->
+  		<div class="footer-copyright text-center py-3">© 2020 Copyright | Hants Tecnologys:
+    	<a href="https://www.linkedin.com/in/eliabe-paz-212927184/"> Eliabe G Paz</a>
+  		</div>
+  		<!-- Copyright -->
+		</footer>
+
+
+
+
+
 		</center>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/min.js/0.2.3/$.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

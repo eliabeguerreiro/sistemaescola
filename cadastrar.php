@@ -28,6 +28,7 @@ header("Location:../src.php?pg=painel");}
     <a class="text-decoration-none text-reset" href="cadastrar.php?pg=cadastrar"><button type="button" class="btn btn-primary">Adicionar Aluno</button></a>
     <a class="text-decoration-none text-reset" href="cadastrar.php?pg=subirvideo"><button type="button" class="btn btn-primary">Adicionar Vídeo</button></a>
     <a class="text-decoration-none text-reset" href="cadastrar.php?pg=mudar"><button type="button" class="btn btn-primary">Mudar Senha</button></a>
+    <a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-primary">Voltar</button></a>
     </div> 
     </center>  
     <script src="//cdnjs.cloudflare.com/ajax/libs/min.js/0.2.3/$.min.js"></script>

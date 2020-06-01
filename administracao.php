@@ -21,6 +21,7 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
     </br>
     <a class="text-decoration-none text-reset" href="administracao.php?pg=1dia"><button type="button" class="btn btn-primary">Apenas um dia</button></a>
     <a class="text-decoration-none text-reset" href="administracao.php?pg=2dia"><button type="button" class="btn btn-primary">Mais de um dia</button></a>
+    <a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-primary">Voltar</button></a>
     </div> 
     <?php
         if($pagina == '2dia'){?>

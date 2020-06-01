@@ -1,12 +1,7 @@
 <?php
 session_start();
 include('functions/funcoes.php');
-include('functions/conexao.php');   
-if(!empty($_SESSION['id'])){   
-}else{header("Location: ../index.php");}
-if($_SESSION['tipo'] == 'Administrador'){}
-else{$_SESSION['msg']='Você não Tem pérmissão para acessar essa pagina!</br>';
-header("Location:../src.php?pg=painel");} 
+include('functions/conexao.php');    
 $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
 ?>
 <!DOCTYPE html>
@@ -14,15 +9,15 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Relatorio</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <title>Relatório</title>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	    <script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
     </head>
     <body>
     <center>
     <div class='jumbotron  container'>
-    <h1>Relatorio de acessos</h1>
+    <h1>Relatório de acessos</h1>
     </br>
     <a class="text-decoration-none text-reset" href="administracao.php?pg=1dia"><button type="button" class="btn btn-primary">Apenas um dia</button></a>
     <a class="text-decoration-none text-reset" href="administracao.php?pg=2dia"><button type="button" class="btn btn-primary">Mais de um dia</button></a>
@@ -131,6 +126,8 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
         }
 ?>
         </div>
-            </center>            
+            </center>   
+            <script src="//cdnjs.cloudflare.com/ajax/libs/min.js/0.2.3/$.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>                  
     </body>
 </html>

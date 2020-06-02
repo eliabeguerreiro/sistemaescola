@@ -53,7 +53,7 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
         $html .='<th scope="col">Matricula</th>';
         $html .='<th scope="col">Dia</th>';
         $html .='<th scope="col">Entrada</th>';
-        $html .='<th scope="col">Saída</th>';
+        $html .='<th scope="col">Saida</th>';
         $html .='</tr>';
         $html .='</thead>';
         $html .='<tbody>';

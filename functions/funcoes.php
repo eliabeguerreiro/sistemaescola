@@ -17,35 +17,33 @@ function video ($sala, $pagina){
                 class='btn btn-info '><?php echo $i;?></button></a>
     </div>
     <?php }?>
-</div>
+    </div>
 
 <?php
-    $cmd = "SELECT * FROM videos WHERE sala = '$sala' AND num_fila = $pagina";
-    $produto = mysqli_query($conn, $cmd);
-    while ($row = mysqli_fetch_array($produto)){
-            ?><div class="container-fluid mx-auto mt-4 mb-4" id="ytplayer">
-    <script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/player_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var player;
-
-    function onYouTubePlayerAPIReady() {
-        player = new YT.Player('ytplayer', {
+//não mexe nisso daqui PELOAMORDEDEUS
+$cmd = "SELECT * FROM videos WHERE sala = '$sala' AND num_fila = $pagina";
+$produto = mysqli_query($conn, $cmd);
+while ($row = mysqli_fetch_array($produto)){
+        ?><div class="container-fluid mx-auto mt-4 mb-4" id="ytplayer"> <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('ytplayer', {
             height: '621px',
             width: '100%',
-            videoId: '<?php echo$row['
-            link '];?>'
-        });
-    }
-    </script>
-</div>
+            videoId: '<?php echo$row['link'];?>'
+            });
+        }
+        </script>
+        </div>
 <?php 
-    return($produto);    
+return($produto);        
     }
 }
-
+//a partir daqui pode mexer
 function msg_sistem ($msg){
         echo "<div class='alert alert-danger' role='alert'>";
         echo$msg;

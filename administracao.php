@@ -6,26 +6,31 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
 ?>
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Relatório</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	    <script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.js"></script>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+
+<body>
     <center>
-    <div class='jumbotron  container'>
-    <h1>Relatório de acessos</h1>
-    </br>
-    <a class="text-decoration-none text-reset" href="administracao.php?pg=1dia"><button type="button" class="btn btn-primary">Apenas um dia</button></a>
-    <a class="text-decoration-none text-reset" href="administracao.php?pg=2dia"><button type="button" class="btn btn-primary">Mais de um dia</button></a>
-    <a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button" class="btn btn-primary">Voltar</button></a>
-    </div> 
-    <?php
+        <div class='jumbotron  container'>
+            <h1>Relatório de acessos</h1>
+            </br>
+            <a class="text-decoration-none text-reset" href="administracao.php?pg=1dia"><button type="button"
+                    class="btn btn-primary">Apenas um dia</button></a>
+            <a class="text-decoration-none text-reset" href="administracao.php?pg=2dia"><button type="button"
+                    class="btn btn-primary">Mais de um dia</button></a>
+            <a class="text-decoration-none text-reset" href="../src.php?pg=painel"><button type="button"
+                    class="btn btn-primary">Voltar</button></a>
+        </div>
+        <?php
         if($pagina == '2dia'){?>
-        <div class='jumbotron  container'> 
+        <div class='jumbotron  container'>
             <form method="POST" action="">
                 <label>Matrícula:</label></br>
                 <input type="matricula" name="matricula" placeholder="Digite a matricula do aluno"></br>
@@ -35,11 +40,12 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
                 </br>
                 </br>
                 <input type="submit" name="btnCadUsuario" value="Procurar"><br>
-                <small id="diaHelp" class="form-text text-muted">Preencha ambos os espaços as datas // Insira as barras "/"</small>
+                <small id="diaHelp" class="form-text text-muted">Preencha ambos os espaços as datas // Insira as barras
+                    "/"</small>
             </form>
-        </div> 
-        <div  class='jumbotron  container'>
-        <?php
+        </div>
+        <div class='jumbotron  container'>
+            <?php
         $html ='';
         $html .="<table class='table'>";
         $html .='<thead>';
@@ -77,20 +83,20 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
          
         }
         if($pagina == '1dia'){?>
-        <div class='jumbotron  container'> 
-            <form method="POST" action="">
-                <label>Matrícula:</label></br>
-                <input type="matricula" name="matricula" placeholder="Digite a matricula do aluno"></br>
-                </br><label>Data:</label></br>
-                <input type="text" name="dia" placeholder="dd/mm/aaaa">
-                </br>
-                </br>
-                <input type="submit" name="btnCadUsuario" value="Procurar"><br>
-                <small id="diaHelp" class="form-text text-muted">Insira a data com as barras "/"</small>
-            </form>
-        </div>
-        <div  class='jumbotron  container'>
-        <?php
+            <div class='jumbotron  container'>
+                <form method="POST" action="">
+                    <label>Matrícula:</label></br>
+                    <input type="matricula" name="matricula" placeholder="Digite a matricula do aluno"></br>
+                    </br><label>Data:</label></br>
+                    <input type="text" name="dia" placeholder="dd/mm/aaaa">
+                    </br>
+                    </br>
+                    <input type="submit" name="btnCadUsuario" value="Procurar"><br>
+                    <small id="diaHelp" class="form-text text-muted">Insira a data com as barras "/"</small>
+                </form>
+            </div>
+            <div class='jumbotron  container'>
+                <?php
         $html ='';
         $html .="<table class='table'>";
         $html .='<thead>';
@@ -126,9 +132,12 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             echo "<a class='text-decoration-none text-reset .mt-1' href='create.php'><button type='button' class='btn btn-primary'>Baixar tabela em PDF</button></a>";           
         }
 ?>
-        </div>
-            </center>   
-            <script src="//cdnjs.cloudflare.com/ajax/libs/min.js/0.2.3/$.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>                  
-    </body>
+            </div>
+    </center>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/min.js/0.2.3/$.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>

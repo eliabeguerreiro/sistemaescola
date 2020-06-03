@@ -49,8 +49,9 @@ include("functions/funcoes.php");
 
             <footer class="page-footer font-small blue">
                 <!-- Copyright -->
-                <div class="footer-copyright text-center py-3">© 2020 Copyright | Hants Tecnologys:
-                    <a href="https://www.linkedin.com/in/eliabe-paz-212927184/"> Eliabe G Paz</a>
+                <div class="footer-copyright text-center py-3">© 2020 Copyright. Hants Tecnologys by
+                    <a href="https://www.linkedin.com/in/eliabe-paz-212927184/"> Eliabe G Paz</a> and
+                    <a href="https://www.linkedin.com/in/professor-ederpaz/"> Eder Paz</a>
                 </div>
                 <!-- Copyright -->
             </footer>

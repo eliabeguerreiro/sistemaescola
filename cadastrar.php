@@ -1,14 +1,12 @@
 <?php
-ob_start();
 session_start();
-include("functions/funcoes.php");
+include('functions/funcoes.php');
+include('functions/conexao.php');
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Administrador'){}
-else{$_SESSION['msg']='Você não Tem pérmissão para acessar essa pagina!</br>';
-header("Location:../src.php?pg=painel");}
-
-
+else{$_SESSION['msg']='Você não Tem permissão para acessar essa pagina!</br>';
+header("Location:../src.php?pg=painel");} 
 ?>
 <!DOCTYPE html>
 <html lang="pt">

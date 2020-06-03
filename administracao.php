@@ -1,7 +1,13 @@
 <?php
 session_start();
 include('functions/funcoes.php');
-include('functions/conexao.php');    
+include('functions/conexao.php');
+if(!empty($_SESSION['id'])){   
+}else{header("Location: ../index.php");}
+if($_SESSION['tipo'] == 'Administrador'){}
+elseif($_SESSION['tipo'] == 'Professor'){}
+else{$_SESSION['msg']='Você não Tem permissão para acessar essa pagina!</br>';
+header("Location:../src.php?pg=painel");}    
 $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
 ?>
 <!DOCTYPE html>

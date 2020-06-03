@@ -5,7 +5,8 @@ $_SESSION['hora_entrada'] = hora_entrada();
 if(!empty($_SESSION['id'])){   
 }else{header("Location: ../index.php");}
 if($_SESSION['tipo'] == 'Administrador'){
-}elseif($_SESSION['tipo'] != '04ano'){
+}elseif($_SESSION['tipo'] == 'Professor'){}
+elseif($_SESSION['tipo'] != '04ano'){
     $_SESSION['msg']='Você não pertence a esta sala!</br>';
 	ob_start();
 	header("Location:../src.php?pg=painel");}

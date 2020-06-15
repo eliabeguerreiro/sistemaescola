@@ -2,22 +2,13 @@
 session_start();
 include("../functions/funcoes.php");
 $_SESSION['hora_entrada'] = hora_entrada();
-if(!empty($_SESSION['id'])){   
-}else{header("Location: ../index.php");}
-if($_SESSION['tipo'] == 'Administrador'){
-}elseif($_SESSION['tipo'] == 'Professor'){}
-elseif($_SESSION['tipo'] != '01ano'){
-    $_SESSION['msg']='Você não pertence a esta sala!</br>';
-	ob_start();
-	header("Location:../src.php?pg=painel");}
-	ob_end_flush();
-$pagina = '01ano';
+$pagina = 'homenagem';
 ?>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title>1° Ano</title>
+    <title>Homenagens</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <script type="text/javascript" src="../js/jquery.js"></script>
@@ -30,13 +21,12 @@ $pagina = '01ano';
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <h1 class="navbar-brand m-auto">1° Ano</h1>
+        <h1 class="navbar-brand m-auto">Homenagens</h1>
         <a class="text-decoration-none text-reset" href="../relatorio.php"><button type="button"
                 class="btn btn-danger">Sair da sala</button></a>
     </nav><?php
     $video = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
-    video($pagina,$video);
-    echo $i;
+    videos_especiais($pagina,$video);
     ?>
     <nav class="navbar navbar-dark bg-primary">
         <h1 class="navbar-brand mx-auto">Escola Universo da Criança</h1>

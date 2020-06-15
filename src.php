@@ -37,11 +37,19 @@ if ($pagina == 'painel'){
     </nav>
     <div class="card mb-1 bg-sencondary">
         <div class="card-body">
+            <h5 class="card-title">Homenagens</h5>
+            <p class="card-text">Acesso livre para todos os alunos</p>
+            <a href="salas/homenagem.php" class="btn btn-info">Homenagens</a>
+        </div>
+    </div>
+    <div class="card mb-1 bg-sencondary">
+        <div class="card-body">
             <h5 class="card-title">Infantil 2</h5>
             <p class="card-text">Acesso exclusivo para alunos do Infantil 2</p>
             <a href="salas/infantil02.php" class="btn btn-info">Sala do Infantil 2</a>
         </div>
     </div>
+    
     </div>
     <div class="card mb-1 bg-sencondary">
         <div class="card-body">

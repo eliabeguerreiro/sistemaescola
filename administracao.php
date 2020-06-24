@@ -69,6 +69,8 @@ $pagina = (isset($_GET['pg']))? $_GET['pg'] : 0;
             $_SESSION['dia2'] = $_POST['dia2'];
             $relat = "SELECT * FROM sessoes WHERE matricula='". $_POST['matricula'] ."' AND dia BETWEEN'". $_POST['dia'] ."' AND '". $_POST['dia2'] ."'";
             $relatorio = mysqli_query($conn, $relat);
+            echo'</br>'.$relat.'</br>';
+            echo'</br>'.var_dump(mysqli_fetch_array($relatorio)).'</br>';
             while($row_relatorio = mysqli_fetch_assoc($relatorio)){
                 $html .='<tr>';
                 $html .="<th scope 'row'>".$row_relatorio['matricula'].'</th>';

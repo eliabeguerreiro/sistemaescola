@@ -212,51 +212,6 @@ if ($pagina == 'apagar'){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if ($pagina == 'mudar'){
     $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
     include_once 'functions/conexao.php';
@@ -324,6 +279,30 @@ if ($pagina == 'mudar'){
 
 </html>
 <?php }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if ($pagina == 'subirvideo'){
     $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
@@ -409,6 +388,36 @@ if ($pagina == 'subirvideo'){
 </html>
 <?php
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if ($pagina == 'subirhomenagem'){
     $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
